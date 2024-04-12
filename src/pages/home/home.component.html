@@ -1,0 +1,24 @@
+<h2>Books</h2>
+<book-list-component
+  class="book-list"
+  [books]="(books$ | async)!"
+  (add)="onAdd($event)"
+></book-list-component>
+
+<h2>My Collection</h2>
+<book-collection
+  class="book-collection"
+  [books]="(bookCollection$ | async)!"
+  (remove)="onRemove($event)"
+>
+</book-collection>
+
+<add-wish-form (addWish)="items.push($event)"> </add-wish-form>
+
+<div>
+  <wish-filter (filter)="filter = $event"></wish-filter>
+</div>
+
+<div>
+  <wish-list [wishes]="items.filter(filter)"></wish-list>
+</div>
