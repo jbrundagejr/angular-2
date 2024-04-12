@@ -1,8 +1,8 @@
-<p *ngIf="wishes.length === 0; else showItems">No items found</p>
-
-<ng-template #showItems>
+<div>
+  @if(wishes.length > 0){
   <ul>
-    <li *ngFor="let wish of wishes">
+    @for(wish of wishes; track wish.wishText){
+    <li>
       <div>
         <label>
           <input
@@ -14,5 +14,9 @@
         </label>
       </div>
     </li>
+    }
   </ul>
-</ng-template>
+  } @else {
+  <p>No items found</p>
+  }
+</div>

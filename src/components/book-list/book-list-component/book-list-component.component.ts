@@ -1,11 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Book } from '../books.model';
 
 @Component({
   selector: 'book-list-component',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './book-list-component.component.html',
   styleUrl: './book-list-component.component.css',
 })

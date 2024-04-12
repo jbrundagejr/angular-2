@@ -1,13 +1,11 @@
 <h2>Books</h2>
 <book-list-component
-  class="book-list"
   [books]="(books$ | async)!"
   (add)="onAdd($event)"
 ></book-list-component>
 
 <h2>My Collection</h2>
 <book-collection
-  class="book-collection"
   [books]="(bookCollection$ | async)!"
   (remove)="onRemove($event)"
 >
